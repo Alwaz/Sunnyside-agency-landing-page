@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* define colors,  */
+:root {
+  /* primary colors */
+  --soft-red: hsl(7, 99%, 70%);
+  --yellow: hsl(51, 100%, 49%);
+  --graphic-design-text: hsl(167, 40%, 24%);
+  --dark-blue: hsl(198, 62%, 26%);
+  --footer-color: hsl(168, 34%, 41%);
+
+  /* Neutral colors */
+  --very-dark-blue: hsl(212, 27%, 19%);
+  --very-dark-greyish-blue: hsl(213, 9%, 39%);
+  --dark-greyish-blue: hsl(232, 10%, 55%);
+  --greyish-blue: hsl(210, 4%, 67%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  font-size: 18px;
+  scroll-behavior: smooth;
+  overflow-x: scroll;
+}
+
+/* header styling */
+header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  /* background: var(--dark-greyish-blue); */
+}
+
+.logo {
+  /* background: violet; */
+  padding: 1.6rem;
+}
+
+.navbar {
+  /* background: chartreuse; */
+  align-items: center;
+  width: 40%;
+  font-family: "Barlow", sans-serif;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar > a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.navbar > a.active {
+  color: var(--dark-blue);
+  background: var(--white);
+  height: 3rem;
+  width: 9rem;
+  border-radius: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* home section stling */
+.home {
+  background-image: url("./images/desktop/image-header.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.home > .home_content {
+  width: 90%;
+  height: 50vh;
+  position: absolute;
+  top: 99px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  /* background: lavender; */
+}
+
+.home > .home_content > h1 {
+  font-size: 4rem;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  font-family: "Fraunces", serif;
+  color: var(--white);
+}
+
+/* Mobile Responsive */
+@media (max-width: 375px) {
+}
+
+/* font-family: 'Barlow', sans-serif;
+font-family: 'Fraunces', serif; */
