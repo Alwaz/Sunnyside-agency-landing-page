@@ -19,6 +19,9 @@
   --dark-greyish-blue: hsl(232, 10%, 55%);
   --greyish-blue: hsl(210, 4%, 67%);
   --white: hsl(0, 0%, 100%);
+
+  /* container identification border */
+  --border: 2px solid var(--dark-blue);
 }
 
 body {
@@ -36,11 +39,9 @@ header {
   align-items: center;
   position: fixed;
   top: 0;
-  /* background: var(--dark-greyish-blue); */
 }
 
 .logo {
-  /* background: violet; */
   padding: 1.6rem;
 }
 
@@ -49,12 +50,11 @@ header .menubar {
   border: 0.1rem solid var(--black);
   cursor: pointer;
   color: var(--white);
-  /* display: none; */
+  display: none;
   padding: 0.5rem 1.5rem;
 }
 
 .navbar {
-  /* background: chartreuse; */
   align-items: center;
   width: 40%;
   font-family: "Barlow", sans-serif;
@@ -101,7 +101,6 @@ header .menubar {
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  /* background: lavender; */
 }
 
 .home > .home_content > h1 {
@@ -110,6 +109,72 @@ header .menubar {
   text-transform: uppercase;
   font-family: "Fraunces", serif;
   color: var(--white);
+}
+
+/* services section stling */
+.services {
+  border: var(--border);
+  /* height: 100vh; */
+  display: grid;
+  grid-template-rows: repeat(3 1fr);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(2 1fr);
+  display: flex;
+  border: var(--border);
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: var(--border);
+}
+
+.col_content {
+  /* border: var(--border); */
+  margin-left: 5%;
+  height: 60%;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.col > img {
+  object-fit: contain;
+}
+
+.title {
+  font-size: 3.5rem;
+  color: var(--very-dark-blue);
+  font-weight: 900;
+  font-family: "Fraunces", serif;
+}
+
+.para {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "Barlow", sans-serf;
+  color: var(--greyish-blue);
+}
+
+.btn {
+  text-decoration: none;
+  font-family: "Fraunces", serif;
+  color: var(--very-dark-blue);
+  font-size: 1.5rem;
+  width: 25%;
+  text-align: center;
+  background: rgb(238, 238, 53);
+  background: linear-gradient(
+    360deg,
+    rgba(238, 238, 53, 1) 0%,
+    rgba(241, 242, 5, 0) 52%
+  );
 }
 
 /* Mobile Responsive */
@@ -121,12 +186,6 @@ header .menubar {
 
   header .navbar {
     display: none;
-    /* position: absolute;
-    top: 100%;
-    left: -120%;
-    width: 100%;
-    background: #eee;
-    border-top: 0.1rem solid rgba(0, 0, 0, 0.1); */
   }
 
   .home > .home_content > h1 {
