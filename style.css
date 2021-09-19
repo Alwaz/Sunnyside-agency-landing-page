@@ -18,7 +18,7 @@
   --very-dark-greyish-blue: hsl(213, 9%, 39%);
   --dark-greyish-blue: hsl(232, 10%, 55%);
   --greyish-blue: hsl(210, 4%, 67%);
-  --white: hsl(0, 0%, 100%);
+  --white: #fffbf8;
 
   /* container identification border */
   --border: 2px solid var(--dark-blue);
@@ -131,12 +131,19 @@ header .menubar {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* width: 100vw; */
   border: var(--border);
+  background-color: var(--white);
 }
+
+/* .row > .col-3 {
+  /* background-image: url("./images/desktop/image-photography.jpg"); 
+} */
 
 .col_content {
   /* border: var(--border); */
   margin-left: 5%;
+  background: var(--white);
   height: 60%;
   width: 65%;
   display: flex;
@@ -203,7 +210,6 @@ header .menubar {
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    /* background: lavender; */
   }
 }
 
