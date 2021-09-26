@@ -11,7 +11,8 @@
   --yellow: hsl(51, 100%, 49%);
   --graphic-design-text: hsl(167, 40%, 24%);
   --dark-blue: hsl(198, 62%, 26%);
-  --footer-color: hsl(168, 34%, 41%);
+  --footer-color: #337a6c;
+  --footer-bg: #90d4c5;
 
   /* Neutral colors */
   --very-dark-blue: hsl(212, 27%, 19%);
@@ -296,12 +297,57 @@ header .menubar {
 .gallery {
   display: grid;
   display: flex;
+  background: var(--footer-bg);
   grid-template-columns: repeat(4 1fr);
 }
 
 .gallery > .image > img {
   object-fit: contain;
   width: 100%;
+}
+
+footer {
+  display: flex;
+  height: 50vh;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: var(--footer-bg);
+}
+
+footer > h1 {
+  font-size: 3rem;
+  font-family: "Fraunces", serif;
+  color: var(--footer-color);
+}
+
+footer > .nav {
+  text-decoration: none;
+  width: 25%;
+  padding: 30px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #337a6c;
+}
+
+footer > .nav > a {
+  text-decoration: none;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.4375rem;
+  color: #337a6c;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 20%;
+}
+
+.icons > img {
+  width: 7%;
 }
 
 /* Mobile Responsive */
